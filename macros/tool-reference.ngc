@@ -1,0 +1,15 @@
+O<tool-reference> SUB
+
+( Filename: tool-reference.ngc )
+
+( Intended to be run as a remapped M600 command. Used to set the reference #<_ToolZRef> for further M6 tool changes. )
+
+(------------------------------- CONFIGURATION PARAMETERS ----------------------------------------------)
+#<_ToolSetterG53> = -66.605 ( Z height of the tool setter + length of the touch probe)
+(-------------------------------------------------------------------------------------------------------)
+
+G30.1
+#<_ToolZRef> = [#<_ToolSetterG53> - #5183 + #<_z>]
+
+O<tool-reference> ENDSUB
+M2
